@@ -12,7 +12,9 @@ const Cart = ({cartItems}) => {
       <div>
         {cartItems.map((item) =>(
           <div key={item.id} className='cart-items-list'>
-            <img clasName='cart-items-image' src={item.image} alt={item.name}/>
+            <img clasName='cart-items-image' src={item.image} alt={item.name}
+            />
+        
             <div className='cart-items-name'>{item.name}</div>
           </div>
         )

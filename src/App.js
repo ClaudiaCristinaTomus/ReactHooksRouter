@@ -12,10 +12,13 @@ const App = () => {
     const ProductExist = cartItems.find((item) => item.id === product.id);
     if (ProductExist) {
       setCartItems(cartItems.map((item) => item.id === product.id ?
-        { ...ProductExist, quantity: ProductExist.quantity + 1 } : item));
+        { ...ProductExist, quantity: ProductExist.quantity + 1 } : item
+        )
+        );
     }
+    
     else {
-      setCartItems([...cartItems, { ...product, quantity: 1 }])
+      setCartItems([...cartItems, { ...product, quantity: 1 }]);
     }
   }
 
